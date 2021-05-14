@@ -8,6 +8,9 @@ To use this template, your computer needs:
 
 - Install requerements.txt
 - Install Mysql<=8
+## Installation docker-compose
+- cd ./myflaskapp_v1.1
+- docker-compose up
 
 ### Running the app
 
