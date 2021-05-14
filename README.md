@@ -1,13 +1,13 @@
-# FlaskApp
+# My Project FlaskApp
 
-Simple application with authentication and CRUD functionality using the Python Flask micro-framework
+Simple application with authentication using the Python Flask micro-framework
 
 ## Installation
 
 To use this template, your computer needs:
 
-- [Python 2 or 3](https://python.org)
-- [Pip Package Manager](https://pypi.python.org/pypi)
+- Install requerements.txt
+- Install Mysql<=8
 
 ### Running the app
 
