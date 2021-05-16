@@ -1,0 +1,51 @@
+---
+- hosts: tag_Owner_Jennysiq
+  become: true
+  
+  tasks:  ####INSTALL DCOKER
+    - name: Install aptitude using apt
+      apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+
+    - name: Install required system packages
+      apt: name={{ item }} state=latest update_cache=yes
+      loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools']
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu xenial stable
+        state: present
+
+    - name: Update apt and install docker-ce
+      apt: update_cache=yes name=docker-ce state=latest
+
+    - name: Install Docker Module for Python
+      pip:
+        name: docker
+    - debug: msg="{{ lookup('env','BUILD_NUMBER') }}"  
+             ####INSTALL NGINX 
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+      become: yes
+    - name: start nginx
+
+      service:
+          name: nginx
+          state: started
+      become: yes
+
+    - name: copy the nginx config file and restart nginx
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+      become: yes
+
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+      become: yes
