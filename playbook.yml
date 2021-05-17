@@ -70,7 +70,7 @@
         requirements: /home/ubuntu/myapp/requirements.txt
        
     - name: Run flask
-      shell: python3 app.py  
+      shell: python3 home/ubuntu/myapp/app.py  
        
        
       
