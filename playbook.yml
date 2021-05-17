@@ -1,5 +1,5 @@
 ---
-  hosts: tag_Owner_Jennysiq
+- hosts: tag_Owner_Jennysiq
   become: yes
   tasks:
     - name: Update all packages
