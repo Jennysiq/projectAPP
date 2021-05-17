@@ -67,7 +67,7 @@
 
     - name: Install requirements.txt
       pip:
-        requirements: /home/ubuntu/requirements.txt
+        requirements: /home/ubuntu/myapp/requirements.txt
        
     - name: Run flask
       shell: python3 app.py  
