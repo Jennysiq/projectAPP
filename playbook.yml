@@ -65,7 +65,8 @@
       apt: update_cache=yes name=python3-pip state=latest
 
     - name: Install requirements.txt
-      shell: pip install -r requirements.txt
+      pip:
+        requirements: requirements.txt
        
     - name: Run flask
       shell: python3 app.py  
