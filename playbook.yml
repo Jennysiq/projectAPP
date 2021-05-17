@@ -73,7 +73,7 @@
       apt: update_cache=yes name libmysqlclient-dev
        
     - name: Run flask
-      shell: python3 home/ubuntu/myapp/app.py  
+      shell: python3 /home/ubuntu/myapp/app.py
        
        
       
