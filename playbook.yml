@@ -54,8 +54,11 @@
     - name: copy app to destination EC2
       copy:
         src: .
-        dest: .
+        dest: /home/ubuntu/myapp/
       become: yes
+      
+    - name: Create dir
+      shell: mkdir /home/ubuntu/myapp
       
     - name: install docker-compose
       apt: update_cache=yes name=docker-compose state=latest
@@ -66,7 +69,7 @@
 
     - name: Install requirements.txt
       pip:
-        requirements: requirements.txt
+        requirements: /home/ubuntu/requirements.txt
        
     - name: Run flask
       shell: python3 app.py  
