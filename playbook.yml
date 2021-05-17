@@ -50,9 +50,6 @@
         name: nginx
         state: restarted
       become: yes
-     
-    - name: Create dir
-      shell: mkdir /home/ubuntu/myapp
       
     - name: copy app to destination EC2
       copy:
