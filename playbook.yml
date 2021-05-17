@@ -1,6 +1,5 @@
 ---
-- name: "AWS - Install docker"
-  hosts: aws-docker-vms
+  hosts: tag_Owner_Jennysiq
   become: yes
   tasks:
     - name: Update all packages
