@@ -57,13 +57,9 @@
         dest: /home/ubuntu/myapp/
       become: yes
       
-      
     - name: install docker-compose
       apt: update_cache=yes name=docker-compose state=latest
       become: yes
-      
-    - name: Install python3-pip
-      apt: update_cache=yes name=python3-pip state=latest
 
     - name: Install requirements.txt
       pip:
