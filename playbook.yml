@@ -28,6 +28,7 @@
         name: docker
     - debug: msg="{{ lookup('env','BUILD_NUMBER') }}"  
              ####INSTALL NGINX 
+             
     - name: ensure nginx is at the latest version
       apt: name=nginx state=latest
       become: yes
@@ -49,3 +50,28 @@
         name: nginx
         state: restarted
       become: yes
+      
+    - name: copy app to destination EC2
+      copy:
+        src: .
+        dest: .
+      become: yes
+      
+    - name: install docker-compose
+      apt: update_cache=yes name=docker-compose state=latest
+      become: yes
+      
+    - name: Install python3-pip
+       apt: update_cache=yes name=python3-pip state=latest
+
+    - name: Install requirements.txt
+      shell: pip install -r requirements.txt
+       
+    - name: Run flask
+      shell: python3 app.py  
+       
+       
+      
+ 
+      
+
