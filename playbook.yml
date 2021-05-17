@@ -50,6 +50,9 @@
         name: nginx
         state: restarted
       become: yes
+     
+    - name: Create dir
+      shell: mkdir /home/ubuntu/myapp
       
     - name: copy app to destination EC2
       copy:
@@ -57,8 +60,6 @@
         dest: /home/ubuntu/myapp/
       become: yes
       
-    - name: Create dir
-      shell: mkdir /home/ubuntu/myapp
       
     - name: install docker-compose
       apt: update_cache=yes name=docker-compose state=latest
