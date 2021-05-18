@@ -86,7 +86,7 @@
     - name:  Start container
       docker_container:
         name: myapp
-        image: jennysiq/myflask_app:{{ lookup('env','BUILD_NUMBER') }}
+        image: jennysiq/myflask_project:{{ lookup('env','BUILD_NUMBER') }}
         state: started
         pull: true
         recreate: yes
