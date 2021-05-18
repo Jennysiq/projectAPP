@@ -103,7 +103,7 @@
         state: started
         recreate: yes
         env:
-          MYSQL_ROOT_PASSWORD: "{{ mysql_root_pass }}"
+          MYSQL_ROOT_PASSWORD: root
         exposed_ports:
           - 3306
         volumes:
