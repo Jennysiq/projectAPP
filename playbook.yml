@@ -71,13 +71,29 @@
 #   - name: Run flask
 #      shell: python3 /home/ubuntu/myapp/app.py
        
-    - name: Run container from myhub
-        shell: docker pull jennysiq/myflask_project:${BUILD_ID}
-        shell: docker run jennysiq/myflask_project:${BUILD_ID}
-       
-    - name: Pull mysql docker
-        shell: docker run --name mysql -v /db:/docker-entrypoint-initdb.d -p 3306 -e MYSQL_ROOT_PASSWORD=Hardcore123 -e MYSQL_DATABASE=myflaskapp -d mysql:latest
-
+#    - name: Run container from myhub
+#        shell: docker pull jennysiq/myflask_project:${BUILD_ID}
+#        shell: docker run jennysiq/myflask_project:${BUILD_ID}
+#       
+#    - name: Pull mysql docker
+#        shell: docker run --name mysql -v /db:/docker-entrypoint-initdb.d -p 3306 -e MYSQL_ROOT_PASSWORD=Hardcore123 -e MYSQL_DATABASE=myflaskapp -d mysql:latest
+     - name: Pull docker image
+       docker_image:
+         name: jennysiq/myflask_project:${BUILD_ID}
+         source: pull
+         
+     - name: Create Mysql container
+       docker_container:
+        name: mysql
+        image: mysql
+        state: started
+        recreate: yes
+        env:
+          MYSQL_ROOT_PASSWORD: "{{ mysql_root_pass }}"
+        exposed_ports:
+          - 3306
+        volumes:
+          - db:/docker-entrypoint-initdb.d/ro
 
       
  
