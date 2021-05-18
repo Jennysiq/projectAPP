@@ -107,7 +107,7 @@
         exposed_ports:
           - 3306
         volumes:
-          - db:/docker-entrypoint-initdb.d/ro
+          - ./db:/docker-entrypoint-initdb.d/:ro
 
       
  
