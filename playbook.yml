@@ -57,9 +57,9 @@
         dest: /home/ubuntu/myapp/
       become: yes
       
-    - name: install docker-compose
-      apt: update_cache=yes name=docker-compose state=latest
-      become: yes
+#    - name: install docker-compose
+#      apt: update_cache=yes name=docker-compose state=latest
+#      become: yes
 
 #    - name: Install requirements.txt
 #      pip:
@@ -71,7 +71,14 @@
 #   - name: Run flask
 #      shell: python3 /home/ubuntu/myapp/app.py
        
+    -name: Run container from myhub
+       shell: docker pull jennysiq/myflask_project:${BUILD_ID}
+       shell: docker run jennysiq/myflask_project:${BUILD_ID}
        
+    -name: Pull mysql docker
+       shell: docker run --name mysql -v /db:/docker-entrypoint-initdb.d -p 3306 -e MYSQL_ROOT_PASSWORD=Hardcore123 -e MYSQL_DATABASE=myflaskapp -d mysql:latest
+
+
       
  
       
