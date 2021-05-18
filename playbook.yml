@@ -77,6 +77,7 @@
 #       
 #    - name: Pull mysql docker
 #        shell: docker run --name mysql -v /db:/docker-entrypoint-initdb.d -p 3306 -e MYSQL_ROOT_PASSWORD=Hardcore123 -e MYSQL_DATABASE=myflaskapp -d mysql:latest
+
      - name: Pull docker image
        docker_image:
          name: jennysiq/myflask_project:${BUILD_ID}
