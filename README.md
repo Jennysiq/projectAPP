@@ -1,4 +1,4 @@
-![Иллюстрация схемы проекта](https://github.com/Jennysiq/projectAPP/files/6506278/CD_Scheme.pdf)
+![Иллюстрация схемы проекта](https://github.com/Jennysiq/projectAPP/CI/CD_Scheme.pdf)
 
 
 # My Project FlaskApp
@@ -20,4 +20,6 @@ To use this template, your computer needs:
 ```bash
 python app.py
 ```
+
+![alt text](example.com/logo.png)
 
