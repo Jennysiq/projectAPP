@@ -1,4 +1,4 @@
-[CD_Scheme.pdf](https://github.com/Jennysiq/projectAPP/files/6506278/CD_Scheme.pdf)
+![Иллюстрация схемы проекта](https://github.com/Jennysiq/projectAPP/files/6506278/CD_Scheme.pdf)
 
 
 # My Project FlaskApp
