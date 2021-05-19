@@ -1,3 +1,6 @@
+[CD_Scheme.pdf](https://github.com/Jennysiq/projectAPP/files/6506278/CD_Scheme.pdf)
+
+
 # My Project FlaskApp
 
 Simple application with authentication using the Python Flask micro-framework
@@ -11,9 +14,6 @@ To use this template, your computer needs:
 - Install docker (optional)
 - Install docker-compose (optional)
 
-## Installation with docker-compose
-- cd ./myflaskapp_v1.1
-- docker-compose up
 
 ### Running the app
 
