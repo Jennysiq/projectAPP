@@ -1,6 +1,3 @@
-![Иллюстрация схемы проекта](https://github.com/Jennysiq/projectAPP/CI/CD_Scheme.pdf)
-projectAPP/CI/Project.png
-
 # My Project FlaskApp
 
 Simple application with authentication using the Python Flask micro-framework
