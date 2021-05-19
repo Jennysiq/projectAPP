@@ -21,5 +21,5 @@ To use this template, your computer needs:
 python app.py
 ```
 
-![alt text](example.com/logo.png)
 
+![Image alt](https://github.com/jennysiq/projectAPP/raw/master/CI/CD_Scheme.pdf)
