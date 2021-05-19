@@ -1,5 +1,5 @@
 ![Иллюстрация схемы проекта](https://github.com/Jennysiq/projectAPP/CI/CD_Scheme.pdf)
-
+projectAPP/CI/Project.png
 
 # My Project FlaskApp
 
@@ -22,4 +22,4 @@ python app.py
 ```
 
 
-![Image alt](https://github.com/jennysiq/projectAPP/raw/master/CI/CD_Scheme.pdf)
+![Image alt](https://github.com/jennysiq/projectAPP/raw/master/CI/Project.png)
